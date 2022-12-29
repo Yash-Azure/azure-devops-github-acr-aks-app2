@@ -41,7 +41,7 @@ stages:
         tags: |
           $(tag)
           
-    - publish: $(Pipeline.Workspace)/manifests
+    - upload: manifests
       artifact: manifests
 
 - stage: Deploy
