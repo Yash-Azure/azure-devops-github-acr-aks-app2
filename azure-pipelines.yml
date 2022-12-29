@@ -39,10 +39,7 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
-          
-    - publish: $(System.DefaultWorkingDirectory)/bin/WebApp
-      artifact: WebApp
+          $(tag) 
 
 - stage: Deploy
   displayName: Deploy stage
