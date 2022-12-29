@@ -41,7 +41,7 @@ stages:
         tags: |
           $(tag)
           
-    - publish: manifests
+    - publish: $(System.DefaultWorkingDirectory)/manifests
       artifact: manifests
 
 - stage: Deploy
